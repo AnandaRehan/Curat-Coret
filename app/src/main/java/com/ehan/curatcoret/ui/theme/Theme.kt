@@ -67,7 +67,7 @@ private val DarkColors = darkColorScheme(
 )
 
 @Composable
-fun CuratcoretTheme(
+fun CuratCoretTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
