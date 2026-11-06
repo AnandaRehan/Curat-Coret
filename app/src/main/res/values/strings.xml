@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Curat-Coret</string>
+    <string name="mode_draw">GAMBAR</string>
+    <string name="mode_pan">GESER</string>
+    <string name="status_format">MODE: %1$s | %2$d%%</string>
+    <string name="cd_zoom_in">Perbesar</string>
+    <string name="cd_reset_view">Reset tampilan</string>
+    <string name="cd_zoom_out">Perkecil</string>
+    <string name="cd_mode_draw">Mode gambar</string>
+    <string name="cd_mode_pan">Mode geser</string>
+    <string name="cd_clear_all">Hapus semua coretan</string>
+    <string name="clear_dialog_title">Hapus semua coretan?</string>
+    <string name="action_delete">Hapus</string>
+    <string name="action_cancel">Batal</string>
+</resources>
