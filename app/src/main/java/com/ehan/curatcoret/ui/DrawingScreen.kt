@@ -82,14 +82,14 @@ fun DrawingScreen(viewModel: CanvasViewModel = viewModel()) {
                 ToolButton(
                     emoji = "✏️",
                     description = stringResource(R.string.cd_mode_draw),
-                    onClick = { viewModel.setMode(ToolMode.DRAW) },
+                    onClick = { viewModel.selectMode(ToolMode.DRAW) },
                     container = AppColors.Slate800,
                     active = viewModel.mode == ToolMode.DRAW,
                 )
                 ToolButton(
                     emoji = "🖐️",
                     description = stringResource(R.string.cd_mode_pan),
-                    onClick = { viewModel.setMode(ToolMode.PAN) },
+                    onClick = { viewModel.selectMode(ToolMode.PAN) },
                     container = AppColors.Slate800,
                     active = viewModel.mode == ToolMode.PAN,
                 )

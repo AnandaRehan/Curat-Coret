@@ -38,7 +38,7 @@ class CanvasViewModel : ViewModel() {
 
     private val lastPointerPos = HashMap<Long, Offset>()
 
-    fun setMode(newMode: ToolMode) {
+    fun selectMode(newMode: ToolMode) {
         mode = newMode
     }
 
