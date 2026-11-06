@@ -29,6 +29,7 @@ import kotlin.math.roundToInt
 @Composable
 fun DrawingScreen(viewModel: CanvasViewModel = viewModel()) {
     var showClearDialog by rememberSaveable { mutableStateOf(false) }
+    var showHistory by rememberSaveable { mutableStateOf(false) }
 
     val modeLabel = stringResource(
         if (viewModel.mode == ToolMode.DRAW) R.string.mode_draw else R.string.mode_pan,
@@ -95,6 +96,15 @@ fun DrawingScreen(viewModel: CanvasViewModel = viewModel()) {
                 )
                 NavDivider()
                 ToolButton(
+                    emoji = "🕘",
+                    description = stringResource(R.string.cd_history),
+                    onClick = {
+                        viewModel.refreshHistory()
+                        showHistory = true
+                    },
+                    container = AppColors.Slate800,
+                )
+                ToolButton(
                     emoji = "🗑️",
                     description = stringResource(R.string.cd_clear_all),
                     onClick = { showClearDialog = true },
@@ -102,6 +112,23 @@ fun DrawingScreen(viewModel: CanvasViewModel = viewModel()) {
                 )
             }
         }
+    }
+
+    if (showHistory) {
+        HistorySheet(
+            entries = viewModel.history,
+            currentId = viewModel.currentDrawingId,
+            onDismiss = { showHistory = false },
+            onOpen = {
+                viewModel.openDrawing(it)
+                showHistory = false
+            },
+            onDelete = viewModel::deleteDrawing,
+            onNew = {
+                viewModel.newDrawing()
+                showHistory = false
+            },
+        )
     }
 
     if (showClearDialog) {

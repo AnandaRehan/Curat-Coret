@@ -15,7 +15,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.unit.toSize
 import com.ehan.curatcoret.CanvasViewModel
-import com.ehan.curatcoret.toStrokePath
+import com.ehan.curatcoret.data.toStrokePath
 import com.ehan.curatcoret.ui.theme.AppColors
 import kotlin.math.floor
 
@@ -91,8 +91,8 @@ fun DrawingCanvas(
             translate(offset.x, offset.y)
             scale(k, k, pivot = Offset.Zero)
         }) {
-            viewModel.strokes.forEach { path ->
-                drawPath(path, AppColors.Stroke, style = style)
+            viewModel.strokes.forEach { stroke ->
+                drawPath(stroke.path, AppColors.Stroke, style = style)
             }
             viewModel.activeStrokes.values.forEach { points ->
                 if (points.size >= 2) {

@@ -13,4 +13,11 @@
     <string name="clear_dialog_title">Hapus semua coretan?</string>
     <string name="action_delete">Hapus</string>
     <string name="action_cancel">Batal</string>
+    <string name="cd_history">Riwayat coretan</string>
+    <string name="history_title">Riwayat coretan</string>
+    <string name="history_new">Coretan baru</string>
+    <string name="history_empty">Belum ada riwayat coretan.</string>
+    <string name="history_current">Sedang dibuka</string>
+    <string name="history_strokes">%1$d coretan</string>
+    <string name="history_delete_title">Hapus coretan ini dari riwayat?</string>
 </resources>
